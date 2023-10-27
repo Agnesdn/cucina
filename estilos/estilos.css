@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#logo {
+    background-image: url(../imagenes/logo-mobile.png);
+    width: 65px;
+    height: 50px;
+    font-size: 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #DBD9C6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 1;
+}
+
+nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#barra>a {
+    list-style: none;
+    text-indent: -100px;
+    overflow: hidden;
+    background: url("../imagenes/menu.png") no-repeat center center;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#cerrar {
+    display: none;
+}
+
+#bar-menu {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: -300px;
+    left: 0;
+    transition: top .5s ease;
+    text-align: center;
+    background-color: #DBD9C6;
+}
+
+#bar-menu li a {
+    color: white;
+    text-transform: uppercase;
+    margin: 15px;
+}
+
+#abrir:target {
+    display: none;
+}
+
+#abrir:target~#cerrar {
+    display: block;
+}
+
+#abrir:target~nav #bar-menu {
+    top: 5rem;
+}
+
+#imagen-banner {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+#sobre-mi {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+#sobre-mi div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#sobre-mi picture img {
+    width: 100%;
+    margin: 10px auto;
+}
+
+#sobre-mi div p {
+    width: calc(100% - 20px);
+    margin: 10px;
+    font-size: 12px;
+    max-width: 90%;
+}
+
+.titulo-seccion {
+    font: 2rem;
+    margin: 10px auto;
+    color: #64674E;
+    font-family: 'Noto Serif Bengali', serif;
+    width: 100%;
+    text-align: center;
+}
+
+.comprar-button {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #64674E;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-shadow: 3px 6px 10px 0px #37373790;
+}
+
+.banner-secundario {
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-image: url(../imagenes/secondary-banner-mobile.jpg);
+}
+
+#libros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.fotorama {
+    width: 100vw;
+    max-width: 1200px;
+    margin: 40px auto 10px auto;
+}
+
+.fotorama__wrap {
+    margin: auto;
+}
+
+
+#recetas {
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.galeria-recetas {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+    max-width: 950px;
+    z-index: 100;
+}
+
+.galeria-recetas li {
+    margin: 10px;
+    position: relative;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+
+.galeria-recetas li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-recetas li a {
+    display: block;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+#curso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.curso-video {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+}
+
+#curso p {
+    width: calc(100% - 20px);
+    margin: 10px;
+    font-size: 12px;
+}
+
+#iframe-contenedor {
+    width: 90vw;
+    height: calc(90vw * 315 / 560);
+    margin: auto;
+}
+
+#curso a input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #64674E;
+    color: #DBD9C6;
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-shadow: 3px 6px 10px 0px #37373790;
+    margin-top: 40px;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: #DBD9C6;
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media a img {
+    width: 40px;
+    margin: 0px 10px;
+    border-radius: 30px;
+}
+
+.datos p {
+    color: white;
+    display: inline-block;
+}
+
+.divisor-seccion{
+    width: 100%;
+    height: 40px;
+    background-color: #64674E;
+}
+
+@media screen and (min-width: 769px) {
+    .titulo-seccion {
+        font-size: 3rem;
+    }
+
+    #sobre-mi div {
+        flex-direction: row;
+        justify-content: space-evenly
+    }
+
+    #sobre-mi div ul {
+        max-width: 45%;
+    }
+
+    #sobre-mi div img {
+        border-radius: 20px;
+    }
+
+    #sobre-mi div ul p {
+        max-width: 90%;
+        font-size: 16px;
+    }
+
+    .contenedor-img2 {
+        order: 2;
+    }
+
+    .buy-button:hover {
+        background-color: #DBD9C6;
+        cursor: pointer;
+    }
+
+    .banner-secundario {
+        background-image: url(../imagenes/secondary-banner.jpg);
+        background-position: center;
+    }
+
+    .cover {
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .galeria-recetas li:hover .cover {
+        opacity: 1;
+    }
+
+    #curso p {
+        width: 90%;
+        margin: 10px auto;
+        font-size: 16px;
+    }
+
+    #curso a input:hover,
+    .comprar-button:hover {
+        background-color: #DBD9C6;
+        cursor: pointer;
+        color: #64674E;
+    }
+
+    .social-media a:hover img {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 891px) {
+
+    #logo {
+        background-image: url(../imagenes/logo.svg);
+        width: 300px;
+        height: 30px;
+    }
+
+    nav{
+        max-width:550px
+    }
+
+    #abrir {
+        display: none;
+    }
+
+    #bar-menu {
+        position: relative;
+        top: 0;
+        display: flex;
+        height: auto;
+    }
+
+    #bar-menu li a:hover {
+        color: #64674E;
+    }
+
+    header {
+        flex-wrap: nowrap;
+    }
+
+    .secondary-banner {
+        background-image: url(../imagenes/secondary-banner.jpg);
+    }
+
+
+
+}
